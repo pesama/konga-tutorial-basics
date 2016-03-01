@@ -1,13 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name uiApp
- * @description
- * # uiApp
- *
- * Main module of the application.
- */
 angular
   .module('uiApp', [
     'ngAnimate',
@@ -15,7 +7,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'konga'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -32,4 +25,9 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+  .run(['metadata', 'util', 'common', '$rootScope', function(metadata, util, common, $rootScope) {
+    common.store('metadata', metadata);
+    util.init(metadata);
+    $rootScope.metadata = metadata;
+  }]);
