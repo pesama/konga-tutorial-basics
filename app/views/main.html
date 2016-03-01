@@ -6,7 +6,7 @@
   </p>
   <div class="row">
     <div class="col-md-4" ng-repeat="entity in metadata.entities">
-      <button class="btn btn-success">{{ entity.name }}</button>
+      <button class="btn btn-success" ng-click="operations.openEntitySearch(entity)">{{ entity.name }}</button>
     </div>
   </div>
 </div>
