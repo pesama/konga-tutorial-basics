@@ -14,9 +14,9 @@ import io.konga.metadata.annotations.ShowInUpdate;
 
 @Entity("organisation")
 @Label("Organisation")
-@Createable
-@Searchable
-@Editable
+@Createable("org-admin")
+@Searchable("org-admin")
+@Editable("org-admin")
 public class Organisation {
 
 	@Field

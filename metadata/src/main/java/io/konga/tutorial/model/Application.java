@@ -32,7 +32,7 @@ public class Application {
 	@ShowInResults
 	@ShowInUpdate
 	@Required
-	@Editable
+	@Editable("app-admin")
 	private String code;
 	
 	@Field

@@ -18,7 +18,7 @@ import io.konga.metadata.annotations.ShowInUpdate;
 @Createable
 @Searchable
 @Editable
-@Deleteable
+@Deleteable("dev-admin")
 public class Developer {
 
 	@Field

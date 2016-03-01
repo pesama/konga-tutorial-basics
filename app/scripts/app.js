@@ -30,4 +30,12 @@ angular
     common.store('metadata', metadata);
     util.init(metadata);
     $rootScope.metadata = metadata;
+  }])
+  .run(['userData', function(userData) {
+
+    // We want to edit 'app key'
+    userData.roles.push('app-admin');
+
+    // We want to create and manage 'orgs'
+    userData.roles.push('org-admin');
   }]);
